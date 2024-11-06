@@ -1,3 +1,10 @@
-# Request Header Parser Microservice
-
-This is the boilerplate for the Request Header Parser Microservice project. Instructions for building your project can be found at https://www.freecodecamp.org/learn/apis-and-microservices/apis-and-microservices-projects/request-header-parser-microservice
+My solution:
+```js
+app.get('/api/whoami', function (req, res) {
+  res.json({
+    ipaddress: req.socket.remoteAddress,
+    language: req.headers['accept-language'],
+    software: req.headers['user-agent']
+  });
+});
+```
